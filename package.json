@@ -1,0 +1,23 @@
+{
+  "name": "hltvAPI",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diogotorres30/hltvAPI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diogotorres30/hltvAPI/issues"
+  },
+  "homepage": "https://github.com/diogotorres30/hltvAPI#readme",
+  "dependencies": {
+    "hltv": "^2.16.2"
+  }
+}
