@@ -18,9 +18,13 @@ function jsonify(ctnt) {
 // 	jsonify(res.players);
 // });
 
-HLTV.getTeamRanking({ year: '2017', month: 'may', day: '29' }).then((res) => {
+// HLTV.getTeamRanking({ year: '2017', month: 'may', day: '29' }).then((res) => {
+//     jsonify(res);
+// })
+
+HLTV.getMatchMapStats({id: 49968}).then((res) => {
     jsonify(res);
-})
+  })
 
 // HLTV.getEvent({ id: 3389 }).then(res => {
 //     console.log(res);
