@@ -29,15 +29,30 @@ function jsonify(ctnt) {
 // HLTV.getEvents().then(res => {
 // 	jsonify(res);
 // })
+var countdown = 4443;
 
-for (i = 4400; i < 4443; i--) {
-	HLTV.getEvent({ id: i }).then(res => {
-		if(res.prizePool == '$1,000,000' || res.prizePool == '$250,000') {
+var myVar = setInterval(hltvThrottle, 250);
+
+var idArray = [];
+
+function hltvThrottle(){
+	HLTV.getEvent({ id: countdown }).then(res => {
+		console.log(countdown);
+		if (res.prizePool == '$1,000,000' || res.prizePool == '$250,000') {
+			idArray.push[res.id];
 			console.log(res.name);
+			console.log(res.prizePool);
+		}
+		countdown--;
+		if (countdown == 0){
+			console.log(idArray);
+			fs.write('idArray.txt', idArray, 'utf8');
+			process.exit();
 		}
 	})
+}
 
-  }
+
 
 // HLTV.getStreams().then((res) => {
 //     console.log(res);
