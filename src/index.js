@@ -33,7 +33,7 @@ function jsonify(ctnt) {
 for (i = 0; i < 4443; i--) {
 	HLTV.getEvent({ id: i }).then(res => {
 		if(res.prizePool == '$1,000,000' || res.prizePool == '$250,000') {
-			console.log(res.prizePool);
+			console.log(res.name);
 		}
 	})
   }
