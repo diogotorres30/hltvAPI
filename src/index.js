@@ -30,12 +30,13 @@ function jsonify(ctnt) {
 // 	jsonify(res);
 // })
 
-for (i = 0; i < 4443; i--) {
+for (i = 4400; i < 4443; i--) {
 	HLTV.getEvent({ id: i }).then(res => {
 		if(res.prizePool == '$1,000,000' || res.prizePool == '$250,000') {
 			console.log(res.name);
 		}
 	})
+
   }
 
 // HLTV.getStreams().then((res) => {
