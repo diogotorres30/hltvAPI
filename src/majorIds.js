@@ -1,6 +1,17 @@
 const { HLTV } = require('hltv');
 const fs = require('fs');
 
+function jsonify(ctnt, filename) {
+	var jsonContent = JSON.stringify(ctnt);
+	// console.log(jsonContent);
+
+	fs.writeFile(filename + '.json', jsonContent, 'utf8', function (err) {
+		if (err) {
+			console.log('An error occured while writing JSON Object to File.');
+			return console.log(err);
+		}
+	});
+}
 var idArray = [];
 
 function getEvent(eventId) {
@@ -13,6 +24,7 @@ function getEvent(eventId) {
                 {eventId: eventId,
                  eventName: res.name});
             console.log(idArray);
+            jsonify(idArray,"EventIds");
         }
     });
 }
